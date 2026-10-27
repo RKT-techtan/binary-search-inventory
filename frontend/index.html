@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>BinarySearch Inventory</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/script.js" defer></script>
+    </head>
+    <body>
+        <main class="app">
+            <heade class="app">
+                <p class="eyebrow">INVENTORY MANAGEMENT</p>
+                <h1>Find your product.</h1>
+                <p class="subtitle">Search your inventory by product sku.</p>
+            </header>
+
+            <section class="search-panel">
+                <label for="sku-input">Product SKU</label>
+                <div class="search-row">
+                    <input
+                    id="sku-input"
+                    type="text"
+                    placeholder="e.g. SKU300"
+                    autocomplete="off"
+                    >
+                    <button id="search-button">Search</button>
+                    <p id="status-message" role="status" aria-live="polite">Enter a SKU to get started.</p>
+                </div>
+            </section>
+
+            <section id="product-result" class="product-card" hidden>
+                <p class="eyebrow">Product Details.</p>
+                <h2 id="product-name"></h2>
+                <p id="product-sku" class="product-sku"></p>
+
+                <div class="details-grid"></div>
+                <div>
+                    <span>Category</span>
+                    <strong id="product-category"></strong>
+                </div>
+                <div>
+                    <span>Price</span>
+                    <strong id="product-price"></strong>
+                </div>
+                <div>
+                    <span>Stock quantity</span>
+                    <strong id="product-quantity"></strong>
+                </div>
+            </section>
+
+            <footer>BinarySearch Inventory . Built with python and flask</footer>
+        </main>
+    </body>
+</html>
