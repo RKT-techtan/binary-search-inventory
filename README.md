@@ -1,23 +1,28 @@
 BinarySearch Inventory
 
-A simple lookup application built with pythone, flask, html, css and javascript. It uses binary search to find products by SKU in a sorted inventory.
+A simple inventory lookup web application built with Python and Flask. It uses binary search to find products by SKU and displays their details.
 
 Features
-. Search products by sku.
-. Use binary search to locate products efficiently.
-. Display product name, category, price and stock quantity.
-. Handle missing products and empty search input.
-. Test the search algorithm and API using pythons unnitest framework.
+
+- Search for products by SKU
+- Use binary search to locate products in sorted inventory data
+- Display product name, category, price, and stock quantity
+- Handle missing products and empty search input
+- Test the search algorithm and API using Python's `unittest` framework
 
 Tech Stack
-. Python --- binary search algorithm and backend logic.
-. Flask ---- API and web server.
-. HTML ----- Page structure.
-. CSS ------ Styling and responsive layout.
-. CSV ------ Sample inventory data.
-. unittest - automated tests.
 
-Project structre
+1. Python — Binary search algorithm and backend logic
+2. Flask — API and web server
+3. HTML — Page structure
+4. CSS — Styling and responsive layout
+5. JavaScript — Search interaction and API requests
+6. CSV — Sample inventory data
+7. unittest — Automated tests
+
+Project Structure
+
+~~~
 binary-search-inventory/
 ├── backend/
 │   ├── app.py
@@ -31,44 +36,56 @@ binary-search-inventory/
 │   └── script.js
 ├── .gitignore
 └── README.md
+~~~
 
-Getting started
-1. Install python and flask
-Make sure python is installed. Open a terminal in the backend directory and run:
-. python -m pip install flask
+Getting Started
 
-2. Start the application
-From the backend directory run:
-. python app.py
-Open this adress in browser:
-. http://127.0.0.1:5000/
+Prerequisites
+- Python 3
+- Flask
 
-3. Run the tests:
-Stop the server ctrl + c, then, from backend directory run:
-. python -m unittest discover -v
+1. Open the backend directory
+bash cd backend
 
-Example searches:
+2. Install Flask
+bash python -m pip install flask
 
-SKU100
-Wireless Mouse
-Product details returned
+3. Start the application
+bash python app.py
 
-SKU300
-USB-C Cable
-Product details returned
+Open [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser.
 
-SKU999
-—
-Product not found
+Keep the terminal running while you use the application.
 
-What I learned
-. Implementing binary search in Python
-. Working with sorted data and SKU lookups
-. Connecting a frontend to a FLASK API
-. Reading inventory data from a csv file
-. Writing automated tests for algorithms and API endpoints
+Running the Tests
+
+Open a second terminal in VS Code and navigate to the backend directory:
+bash cd backend
+
+Run the automated tests:
+bash python -m unittest discover -v
+
+The tests check the binary search algorithm, the API health endpoint, successful product lookups, and missing products.
+
+Example Searches
+~~~
+| SKU | Product | Expected result |
+|---|---|---|
+| `SKU100` | Wireless Mouse | Product found |
+| `SKU300` | USB-C Cable | Product found |
+| `SKU999` | — | Product not found |
+~~~
+
+What I Learned
+- Implementing binary search in Python
+- Working with sorted data and search boundaries
+- Building API endpoints with Flask
+- Connecting a frontend to a backend using JavaScript
+- Loading inventory data from a CSV file
+- Writing automated tests with `unittest`
+- Organizing and publishing a project using Git and GitHub
 
 Future Improvements
-. Add product-name search if needed
-. Improve input validation and error handling
-. Deploy the application
+- Add inventory items dynamically
+- Support searching by product name
+- Store inventory data in a database
